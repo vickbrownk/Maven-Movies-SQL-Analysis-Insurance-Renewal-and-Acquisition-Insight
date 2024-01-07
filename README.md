@@ -28,5 +28,6 @@ The Maven Movies data analysis project comprised two distinct phases, each with 
 This project not only showcased my technical proficiency but also demonstrated the strategic application of data analytics in addressing real-world business challenges. The subsequent sections delve into the specific details and outcomes of each project phase, highlighting the value added through meticulous data analysis.
 
 
-Get tO know the database
-https://user-images.githubusercontent.com/68370376/183249078-fcfafc98-878b-418c-bbe6-410471fd1880.png
+**Get to know the database**
+
+![Maven movies databse](https://github.com/vickbrownk/Maven-Movies-SQL-Analysis-Insurance-Renewal-and-Acquisition-Insight/assets/55210893/a497f3a2-ad3a-4a0e-90ba-0b8db14ae0f3)
