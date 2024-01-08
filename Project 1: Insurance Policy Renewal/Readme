@@ -9,5 +9,32 @@ The project involved a comprehensive approach, leveraging robust SQL skills to e
 ## Underwriter's Letter:
 Included in this repository is the underwriter's letter, providing essential context to underscore the importance of the conducted data analysis. This letter serves as a valuable component in understanding the project's significance.
 
-## Results:
-The outcomes of the data analysis are presented, featuring key findings and insights. Visual aids such as charts and graphs are incorporated to enhance the understanding of pivotal points. The documented results aim to provide a comprehensive overview of the project's impact on insurance policy renewal processes.
+## Tasks:
+
+### 1. Count of Unique Film Titles and Categories at Each Store
+```sql
+SELECT store_id, COUNT(DISTINCT film_id) AS unique_film_titles, COUNT(DISTINCT category) AS unique_film_categories
+FROM inventory
+GROUP BY store_id;
+```
+
+### 2. Replacement Cost Analysis for Films
+```sql
+SELECT MIN(replacement_cost) AS least_expensive, MAX(replacement_cost) AS most_expensive, AVG(replacement_cost) AS average_cost
+FROM film;
+```
+
+### 3. Assessment of Payment Processing Fraud Risk
+```sql
+SELECT AVG(amount) AS average_payment, MAX(amount) AS max_payment
+FROM payment;
+```
+
+### 4. Customer Rental Statistics
+```sql
+SELECT customer_id, COUNT(*) AS rental_count
+FROM rental
+GROUP BY customer_id
+ORDER BY rental_count DESC;
+```
+
