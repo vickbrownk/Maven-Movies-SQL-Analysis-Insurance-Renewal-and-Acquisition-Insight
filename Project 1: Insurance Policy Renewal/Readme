@@ -1,40 +1,55 @@
-# Insurance Policy Renewal Project
+Here’s a more structured and refined version of your document:
 
-## Objectives:
-In this project phase, the primary goal is to furnish updated information crucial for the insurance policy renewal process. The emphasis lies in highlighting the significance of accurate data in facilitating smooth policy approval.
+---
 
-## Approach:
-The project involved a comprehensive approach, leveraging robust SQL skills to extract and analyze data from diverse tables within the movies database. Overcoming challenges related to data extraction and analysis is a focal point, showcasing the adaptability and problem-solving capabilities applied.
+# **Insurance Policy Renewal Project**
 
-## Underwriter's Letter:
-Included in this repository is the underwriter's letter, providing essential context to underscore the importance of the conducted data analysis. This letter serves as a valuable component in understanding the project's significance.
+## **Project Objectives**
+This phase of the project focuses on providing updated and accurate data essential for the insurance policy renewal process. Ensuring data accuracy is critical for seamless policy approvals.
 
-## Tasks:
+## **Approach**
+A structured data analysis approach was employed, utilizing SQL to extract and analyze key insights from multiple tables within the movies database. The project highlights problem-solving capabilities in overcoming data extraction challenges and emphasizes the importance of precision in data handling.
 
-### 1. Count of Unique Film Titles and Categories at Each Store
+## **Underwriter's Letter**
+This repository includes an underwriter’s letter, which provides essential context for the data analysis conducted. The letter serves as a key reference in understanding the significance of the project’s findings.
+
+## **Key Tasks & SQL Queries**
+
+### **1. Unique Film Titles and Categories Per Store**
+This query determines the number of unique film titles and categories available at each store.
 ```sql
-SELECT store_id, COUNT(DISTINCT film_id) AS unique_film_titles, COUNT(DISTINCT category) AS unique_film_categories
+SELECT store_id, 
+       COUNT(DISTINCT film_id) AS unique_film_titles, 
+       COUNT(DISTINCT category) AS unique_film_categories
 FROM inventory
 GROUP BY store_id;
 ```
 
-### 2. Replacement Cost Analysis for Films
+### **2. Replacement Cost Analysis**
+Analyzing the cost range of film replacements, including the least expensive, most expensive, and average costs.
 ```sql
-SELECT MIN(replacement_cost) AS least_expensive, MAX(replacement_cost) AS most_expensive, AVG(replacement_cost) AS average_cost
+SELECT MIN(replacement_cost) AS least_expensive, 
+       MAX(replacement_cost) AS most_expensive, 
+       AVG(replacement_cost) AS average_cost
 FROM film;
 ```
 
-### 3. Assessment of Payment Processing Fraud Risk
+### **3. Payment Processing Fraud Risk Assessment**
+Evaluating payment transactions to identify potential fraud risks by analyzing average and maximum payment amounts.
 ```sql
-SELECT AVG(amount) AS average_payment, MAX(amount) AS max_payment
+SELECT AVG(amount) AS average_payment, 
+       MAX(amount) AS max_payment
 FROM payment;
 ```
 
-### 4. Customer Rental Statistics
+### **4. Customer Rental Statistics**
+Determining the number of rentals per customer and ranking them in descending order.
 ```sql
-SELECT customer_id, COUNT(*) AS rental_count
+SELECT customer_id, 
+       COUNT(*) AS rental_count
 FROM rental
 GROUP BY customer_id
 ORDER BY rental_count DESC;
 ```
 
+This project demonstrates the effective use of SQL for extracting meaningful insights, ensuring data accuracy, and supporting critical decision-making in the insurance policy renewal process.
